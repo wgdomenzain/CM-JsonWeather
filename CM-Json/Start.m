@@ -7,6 +7,8 @@
 //
 
 #import "Start.h"
+#define nUagLat 20.695306
+#define nUagLng -103.418190
 
 @interface Start ()
 
@@ -16,7 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSDictionary *jsonResponse = [Declarations getWeather:nUagLat and:nUagLng];
+    [Parser parseWeather:jsonResponse];
+    print(NSLog(@"mstTemp = %@", mstTemp))
+    print(NSLog(@"mstTempMax = %@", mstTempMax))
+    print(NSLog(@"mstTempMin = %@", mstTempMin))
+    print(NSLog(@"mstPressure = %@", mstPressure))
+    print(NSLog(@"mstHumidity = %@", mstHumidity))
+    
+    self.lblTemp.text       = mstTemp;
+    self.lblMax.text        = mstTempMax;
+    self.lblMin.text        = mstTempMin;
+    self.lblPressure.text   = mstPressure;
+    self.lblHumidity.text   = mstHumidity;
 }
 
 - (void)didReceiveMemoryWarning {
