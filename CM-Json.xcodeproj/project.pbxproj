@@ -28,6 +28,7 @@
 		D1DBA4081B51649800DAB651 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBA3FA1B51649800DAB651 /* SBJsonTokeniser.m */; };
 		D1DBA4091B51649800DAB651 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBA3FC1B51649800DAB651 /* SBJsonUTF8Stream.m */; };
 		D1DBA40A1B51649800DAB651 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBA3FE1B51649800DAB651 /* SBJsonWriter.m */; };
+		D1DBA40D1B51715400DAB651 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBA40C1B51715400DAB651 /* Parser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		D1DBA3FC1B51649800DAB651 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		D1DBA3FD1B51649800DAB651 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		D1DBA3FE1B51649800DAB651 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		D1DBA40B1B51715400DAB651 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		D1DBA40C1B51715400DAB651 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				D1DBA3BB1B51631700DAB651 /* AppDelegate.m */,
 				D1DBA3E11B51639200DAB651 /* Declarations.h */,
 				D1DBA3E21B51639200DAB651 /* Declarations.m */,
+				D1DBA40B1B51715400DAB651 /* Parser.h */,
+				D1DBA40C1B51715400DAB651 /* Parser.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				D1DBA3E31B51639200DAB651 /* Declarations.m in Sources */,
 				D1DBA4011B51649800DAB651 /* SBJsonStreamParser.m in Sources */,
 				D1DBA4091B51649800DAB651 /* SBJsonUTF8Stream.m in Sources */,
+				D1DBA40D1B51715400DAB651 /* Parser.m in Sources */,
 				D1DBA40A1B51649800DAB651 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
