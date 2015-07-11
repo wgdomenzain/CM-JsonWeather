@@ -18,19 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *jsonResponse = [Declarations getWeather:nUagLat and:nUagLng];
-    [Parser parseWeather:jsonResponse];
-    print(NSLog(@"mstTemp = %@", mstTemp))
-    print(NSLog(@"mstTempMax = %@", mstTempMax))
-    print(NSLog(@"mstTempMin = %@", mstTempMin))
-    print(NSLog(@"mstPressure = %@", mstPressure))
-    print(NSLog(@"mstHumidity = %@", mstHumidity))
-    
-    self.lblTemp.text       = mstTemp;
-    self.lblMax.text        = mstTempMax;
-    self.lblMin.text        = mstTempMin;
-    self.lblPressure.text   = mstPressure;
-    self.lblHumidity.text   = mstHumidity;
+    mstTemp = [[NSString alloc] init];
+    mstTempMax = [[NSString alloc] init];
+    mstTempMin = [[NSString alloc] init];
+    mstPressure = [[NSString alloc] init];
+    mstHumidity = [[NSString alloc] init];
+    [self initData];
+    [self initController];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,4 +33,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)initData {
+    NSDictionary *jsonResponse = [Declarations getWeather:nUagLat and:nUagLng];
+    [Parser parseWeather:jsonResponse];
+    print(NSLog(@"mstTemp = %@", mstTemp))
+    print(NSLog(@"mstTempMax = %@", mstTempMax))
+    print(NSLog(@"mstTempMin = %@", mstTempMin))
+    print(NSLog(@"mstPressure = %@", mstPressure))
+    print(NSLog(@"mstHumidity = %@", mstHumidity))
+}
+
+- (void)initController {
+}
+
+- (IBAction)btnRefrsehPressed:(id)sender {
+    self.lblTemp.text       = mstTemp;
+    self.lblMax.text        = mstTempMax;
+    self.lblMin.text        = mstTempMin;
+    self.lblPressure.text   = mstPressure;
+    self.lblHumidity.text   = mstHumidity;
+}
 @end

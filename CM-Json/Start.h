@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblMin;
 @property (strong, nonatomic) IBOutlet UILabel *lblPressure;
 @property (strong, nonatomic) IBOutlet UILabel *lblHumidity;
+- (IBAction)btnRefrsehPressed:(id)sender;
 
 @end
 

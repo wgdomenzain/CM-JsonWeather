@@ -14,13 +14,11 @@
     //check for valid value
     if(json != nil){
         NSDictionary    *main = [json valueForKey: @"main"];
-        int temp = (int)[main valueForKey: @"temp"];
-        
-        mstTemp     = [main valueForKey: @"temp"];
-        mstHumidity = [main valueForKey: @"humidity"];
-        mstPressure = [main valueForKey: @"pressure"];
-        mstTempMax  = [main valueForKey: @"temp_max"];
-        mstTempMin  = [main valueForKey: @"temp_min"];
+        mstTemp     = [[main valueForKey: @"temp"] stringValue];
+        mstHumidity = [[main valueForKey: @"humidity"]stringValue];
+        mstPressure = [[main valueForKey: @"pressure"]stringValue];
+        mstTempMax  = [[main valueForKey: @"temp_max"]stringValue];
+        mstTempMin  = [[main valueForKey: @"temp_min"]stringValue];
     }
 }
 
